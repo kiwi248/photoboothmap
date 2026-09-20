@@ -9,6 +9,5 @@ class Brand(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(100), unique=True, nullable=False)
-    slug = Column(String(100), unique=True, nullable=False)
-    logo_url = Column(String(500))
+    color_hex = Column(String(7), nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
